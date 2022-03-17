@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Caclutlatrice
 {
-    public class Calculateur
+    public static class Calculateur
     {
         private static string _separateur = ",";
         private static string _retourChariot = "\n";
