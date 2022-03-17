@@ -1,14 +1,18 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Caclutlatrice;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace Test.Calculatrice
 {
     [TestClass]
-    public class UnitTest1
+    public class TestsCalculteur
     {
         [TestMethod]
-        public void TestMethod1()
+        //Method + Entée + Comportement
+        public void Add_ChaineVide_RetourneZero()
         {
+            int resultat = Calculateur.Add("");
+            Assert.AreEqual(0, resultat);
         }
     }
 }

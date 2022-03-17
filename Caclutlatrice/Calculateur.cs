@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Caclutlatrice
 {
-    public class Class1
+    public class Calculateur
     {
+        public static int Add(string numbers)
+        {
+            return GererNombreSimple(numbers);
+        }
+
+        private static int GererNombreSimple(string numbers)
+        {
+            return 0;
+        }
     }
 }

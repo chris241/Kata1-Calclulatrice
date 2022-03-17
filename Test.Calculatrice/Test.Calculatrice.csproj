@@ -49,11 +49,17 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="TestsCalculteur.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Caclutlatrice\Caclutlatrice.csproj">
+      <Project>{4D5EF4D7-4973-45A1-881E-B97FE68FCD67}</Project>
+      <Name>Caclutlatrice</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

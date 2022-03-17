@@ -1,0 +1,6 @@
+C:\Users\ASUS\source\repos\kata1-Caclutlatrice\Caclutlatrice\bin\Debug\Caclutlatrice.dll
+C:\Users\ASUS\source\repos\kata1-Caclutlatrice\Caclutlatrice\bin\Debug\Caclutlatrice.pdb
+C:\Users\ASUS\source\repos\kata1-Caclutlatrice\Caclutlatrice\obj\Debug\Caclutlatrice.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\kata1-Caclutlatrice\Caclutlatrice\obj\Debug\Caclutlatrice.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\kata1-Caclutlatrice\Caclutlatrice\obj\Debug\Caclutlatrice.dll
+C:\Users\ASUS\source\repos\kata1-Caclutlatrice\Caclutlatrice\obj\Debug\Caclutlatrice.pdb
