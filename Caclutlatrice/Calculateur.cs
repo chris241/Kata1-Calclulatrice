@@ -13,14 +13,26 @@ namespace Caclutlatrice
 
         public static int Add(string numbers)
         {
+            
             if (EstVide(numbers))
+            {
                 return 0;
+            }
+            if(numbers.StartsWith("//"))
+            {
+                _separateur = numbers.Substring(2, 1);
+                numbers = numbers.Substring(4);
+            }
+            if (PossedeUnDelimiteur(numbers))
+            {
+                return GererDeuxNombresMultiples(numbers);
+            }
             if (PossedeRetourChariot(numbers))
             {
                 return GererDeuxNombresAvecPlusieursRetourChariot(numbers);
             }         
-            if (PossedeUnDelimiteur(numbers))
-                return GererDeuxNombresMultiples(numbers);
+            
+               
             return GererNombreSimple(numbers);
         }
 
@@ -30,7 +42,7 @@ namespace Caclutlatrice
         }
         private static int GererDeuxNombresMultiples(string numbers)
         {
-            string[] tabChaines = numbers.Split(_separateur[0]);
+            string[] tabChaines = numbers.Split(_separateur.ToCharArray());
             int total = 0;
             foreach(string chaine in tabChaines)
             {
@@ -44,7 +56,7 @@ namespace Caclutlatrice
             int total = 0;
             foreach (string chaine in tabChaines)
             {
-                total += GererNombreSimple(chaine);
+                total += GererDeuxNombresMultiples(chaine);
             }
             return total;
         }

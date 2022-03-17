@@ -62,5 +62,23 @@ namespace Test.Calculatrice
             int resultat = Calculateur.Add("4\n2\n1");
             Assert.AreEqual(7, resultat);
         }
+        [TestMethod]
+        public void Add_ChaineAvecPlusieursRetourChariotEtQuatreNombres_RetourneLaSomme()
+        {
+            int resultat = Calculateur.Add("1,2\n3\n4");
+            Assert.AreEqual(10, resultat);
+        }
+        [TestMethod]
+        public void Add_ChaineAvecDelimiteurEtUnNombre_RetourneLeNombre()
+        {
+            int resultat = Calculateur.Add("//;\n4");
+            Assert.AreEqual(4, resultat);
+        }
+        [TestMethod]
+        public void Add_ChaineAvecDelimiteurEtDeuxNombres_RetourneLaSomme()
+        {
+            int resultat = Calculateur.Add("//;\n1;2");
+            Assert.AreEqual(3, resultat);
+        }
     }
 }
