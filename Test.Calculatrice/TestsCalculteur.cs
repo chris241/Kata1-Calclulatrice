@@ -38,5 +38,11 @@ namespace Test.Calculatrice
             int resultat = Calculateur.Add("2,4");
             Assert.AreEqual(6, resultat);
         }
+        [TestMethod]
+        public void Add_ChaineAvecPlusieursNombres_RetourneLaSomme()
+        {
+            int resultat = Calculateur.Add("2,4,3");
+            Assert.AreEqual(9, resultat);
+        }
     }
 }
