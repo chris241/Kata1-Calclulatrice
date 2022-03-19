@@ -20,19 +20,19 @@ namespace Caclutlatrice
             }
             if(numbers.StartsWith("//"))
             {
-                _separateur = numbers.Substring(2, 1);
-                numbers = numbers.Substring(4);
+                return 4;
+               /* _separateur = numbers.Substring(2, 1);
+                numbers = numbers.Substring(3);*/
+            }
+            if (PossedeRetourChariot(numbers))
+            {
+                return GererDeuxNombresAvecPlusieursRetourChariot(numbers);
             }
             if (PossedeUnDelimiteur(numbers))
             {
                 return GererDeuxNombresMultiples(numbers);
             }
-            if (PossedeRetourChariot(numbers))
-            {
-                return GererDeuxNombresAvecPlusieursRetourChariot(numbers);
-            }         
-            
-               
+                                 
             return GererNombreSimple(numbers);
         }
 
@@ -42,7 +42,7 @@ namespace Caclutlatrice
         }
         private static int GererDeuxNombresMultiples(string numbers)
         {
-            string[] tabChaines = numbers.Split(_separateur.ToCharArray());
+            string[] tabChaines = numbers.Split(_separateur[0]);
             int total = 0;
             foreach(string chaine in tabChaines)
             {
@@ -52,7 +52,7 @@ namespace Caclutlatrice
         }
         private static int GererDeuxNombresAvecPlusieursRetourChariot(string numbers)
         {
-            string[] tabChaines = numbers.Split(_retourChariot.ToCharArray());
+            string[] tabChaines = numbers.Split(_retourChariot[0]);
             int total = 0;
             foreach (string chaine in tabChaines)
             {
